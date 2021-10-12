@@ -1,0 +1,26 @@
+/* styles for table */
+.table form {
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* styles for select */
+.table form select {
+    background: rgb(238, 119, 76);
+    color: white;
+    width: 70px;
+}
+
+/* styles for input */
+.table form input {
+    background: rgb(238, 119, 76);
+    color: white;
+}
+
+/* styles for caption */
+.main .table caption {
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: orangered;
+}

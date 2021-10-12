@@ -1,0 +1,21 @@
+/*.about class of about.html, change margin and font-family*/
+.about {
+    margin-left: 15px;
+    /* font for text */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.about h3 {
+    color: orangered;
+    margin: 15px 0 15px 0;
+}
+
+.about a {
+    /* remove underline */
+    text-decoration: none;
+}
+
+/*when hovering over links, the text becomes underlined*/
+.about a:hover {
+    text-decoration: underline;
+}

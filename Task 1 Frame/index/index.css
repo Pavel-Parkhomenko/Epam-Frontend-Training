@@ -1,0 +1,70 @@
+/*zeroing styles*/
+* {
+    padding: 0px;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+    padding: 20px;
+}
+
+/*body on full screen*/
+html, body {
+    height: 100%;
+}
+
+/*grid model - 2 collumns 3 rows*/
+.grid_model {
+    /* using grid model */
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 6fr 10fr 50px;
+    /* grid-template-rows: 0.5fr minmax(auto, auto) 50px; */
+    /*scheme grid*/
+    grid-template-areas: "header header" 
+                        "mymenu main" 
+                        "footer footer";
+}
+
+.header, .mymenu, .footer, .main {
+    background-color: #f2f3f4;
+    border-radius: 10px;
+}
+
+/* iframe on full parent container*/
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* add background div.header */
+.header {
+    grid-area: header;
+    margin-bottom: 10px;
+    background: url('../img/fon3.jpg');
+    /* make a block element from an inline element */
+    display: block;
+    background-position: center;
+    /* remove repeat img */
+    background-repeat: no-repeat;
+    /* size img 100% parrent */
+    background-size: 100%;
+    background-color: black;
+}
+
+.main {
+    grid-area: main;
+    margin-left: 15px;
+}
+
+.mymenu {
+    grid-area: mymenu;
+    height: 145px;
+}
+
+.footer {
+    grid-area: footer;
+    margin-top: 10px;
+}

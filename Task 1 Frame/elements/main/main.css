@@ -1,0 +1,20 @@
+/* styles for heafing h3*/
+.text h3{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: orangered;
+}
+/* outer padding for text*/
+.text{
+    margin-left: 10px;
+}
+.text a{
+    /* remove inderline links */
+    text-decoration: none;
+    color: orangered;
+}
+/* on hover set underline links */
+.text a:hover{
+    text-decoration: underline;
+}
