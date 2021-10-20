@@ -1,0 +1,13 @@
+/* styles for h1, h3 from class header */
+.header h1, .header h3 {
+    text-align: center;
+    /* set centered screen */
+    vertical-align: middle;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header h1 {
+    font-size: 45px;
+    margin-top: 50px;
+}

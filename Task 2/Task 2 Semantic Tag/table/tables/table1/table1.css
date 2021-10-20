@@ -1,0 +1,34 @@
+/* styles table1 (default on site) */
+/* styles for tag table */
+table {
+    border: 1px solid #d3d3d3;
+    background: #fefefe;
+    width: 100%;
+    border-radius: 5px;
+}
+/* styles for tag td */
+td {
+    padding: 18px 28px 18px;
+    /* position text centre */
+    text-align: center;
+}
+/* styles for th */
+th {
+    padding-top: 22px;
+    /* add shadow for cell th */
+    text-shadow: 1px 1px 1px #fff;
+    background: #e8eaeb;
+}
+
+td {
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+/* position first cell td and cell th */
+td.first, th.first {
+    text-align: left
+}
+/* position last cell td */
+td.last {
+    border-right: none;
+}

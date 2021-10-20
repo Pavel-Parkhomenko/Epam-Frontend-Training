@@ -1,0 +1,24 @@
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    background: #798299;
+    border-radius: 10px;
+}
+/* underline text when hovering over a cell */
+td:hover{
+    text-decoration: underline;
+    color: #EDB749;
+}
+ 
+th {
+    color: #EDB749;
+    padding: 12px 17px;
+}
+
+td {
+    color: #CAD4D6;
+    border-left: 1px solid #37B5A5;
+    padding: 7px 17px;
+}

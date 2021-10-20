@@ -1,0 +1,24 @@
+/* styles for tag table */
+table {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  /* remove double cell borders */
+  border-collapse: separate;
+  /* Set the distance between the borders of cells in the table  */
+  border-spacing: 5px;
+  background: #ECE9E0;
+  color: #656665;
+  border: 16px solid #ECE9E0;
+  border-radius: 10px;
+  width: 100%;
+}
+
+td {
+  text-align: center; 
+  background: #F5D7BF;
+}
+
+th {
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--styles for header, main, mymenu, footer-->
+    <link rel="stylesheet" href="../index/index.css">
+    <!--styles for table1(default on site)-->
+    <link rel="stylesheet" href="../table/tables/table1/table1.css" id="linkTable">
+    <!--styles for form (select, input)-->
+    <link rel="stylesheet" href="tableStyle.css">
+    <title>Table</title>
+</head>
+
+<body>
+    <!-- grid model. styles from index.css -->
+    <div class="grid_model">
+        <div class="header" property="header">
+            <!--using iframe header. remove scrolling and border-->
+            <iframe scrolling="no" src="../elements/header/header.html" frameborder="0"></iframe>
+        </div>
+        <div class="mymenu" property="menu">
+            <!--using iframe menu. remove scrolling and border-->
+            <iframe scrolling="no" src="../elements/menu/menu.html" frameborder="0"></iframe>
+        </div>
+        <!--place for table-->
+        <div class="main" vocab="https://schema.org/" typeof="Table">
+            <div class="table">
+                <table>
+                    <!--header table-->
+                    <caption>
+                        <h3 property="title">Рейтинг языков программирования</h3>
+                    </caption>
+                    <tr>
+                        <th>Год</th>
+                        <th>JavaScript</th>
+                        <th>C#</th>
+                        <th>PHP</th>
+                    </tr>
+                    <tr>
+                        <th>2000</th>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>2010</th>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th>2015</th>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <th>2021</th>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>3</td>
+                    </tr>
+                </table>
+                <!--form for select style table-->
+                <form action="#" method="post" id="form">
+                    <!-- drop-down list where you can choose one of three table styles -->
+                    <select size="1" name="select">
+                        <!--default them1-->
+                        <option property="chooseOne" selected value="them1">тема 1</option>
+                        <option property="chooseTwo" value="them2">тема 2</option>
+                        <option property="chooseThird" value="them3">тема 3</option>
+                    </select>
+                    <!--button to submit selection -->
+                    <input property="applyButton" name="submit" type="submit" value="Применить">
+                </form>
+            </div>
+            <!--script to choose a style table-->
+            <script property="script" src="tableScript.js"></script>
+        </div>
+        <div class="footer" property="footer">
+            <!--using iframe menu. remove scrolling and border-->
+            <iframe scrolling="no" src="../elements/footer/footer.html" frameborder="0"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+.mymenu{
+    padding: 0;
+    /*remove the marker from the list*/
+    marker-end: none;
+    list-style-type: none;
+}
+/* zeroing styles from the list */
+.mymenu ul{
+    margin:0;
+    padding: 0;
+}
+.mymenu ul li{
+    list-style: none;
+    border-bottom: 3px solid #666;
+}
+/* styles for links */
+.mymenu ul li a{
+    background-color: #949494;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-left: 20px solid #33ADFF;
+    /*make a block element out of an inline element*/
+    display: block;
+}
+.mymenu ul li a:hover{
+    color: orangered;
+    font-size: 20px;
+}

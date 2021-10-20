@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--styles for divs header, main, menu and footer-->
+    <link rel="stylesheet" href="../index/index.css">
+    <!--styles for div about-->
+    <link rel="stylesheet" href="about.css">
+    <title>About</title>
+</head>
+
+<body>
+    <div class="grid_model">
+        <!--using iframe header-->
+        <div class="header">
+            <iframe scrolling="no" src="../elements/header/header.html" frameborder="0"></iframe>
+        </div>
+        <!--using iframe menu-->
+        <div class="mymenu">
+            <iframe scrolling="no" src="../elements/menu/menu.html" frameborder="0"></iframe>
+        </div>
+        <!--in this class contains info about author site-->
+        <main vocab="https://schema.org/" typeof="Person" class="main vcard">
+            <div class="about">
+                <h3 property="author">Автор сайта</h3>
+                <p property="name">Пархоменко Павел</p>
+            </div>
+            <div class="about">
+                <h3 property="email">Email</h3>
+                <p property="email">pawelparhomenko@gmail.com</p>
+            </div>
+            <div class="about">
+                <h3 property="telephone">Телефон</h3>
+                <p property="telephone">+375256334583</p>
+            </div>
+            <div class="about">
+                <h3 property="url">Telegram</h3>
+                <a property="url" href="https://t.me/pasha_235">
+                    <p>pasha_235</p>
+                </a>
+            </div>
+            <div class="about">
+                <h3 property="url">Моя страница ВКонтакте</h3>
+                <a property="url" href="https://vk.com/pashaparkhomenko1">
+                    <p>pashaparkhomenko1</p>
+                </a>
+            </div>
+        </main>
+        <!--using iframe footer-->
+        <div class="footer">
+            <iframe scrolling="no" src="../elements/footer/footer.html" frameborder="0"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>
