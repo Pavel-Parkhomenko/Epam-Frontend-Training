@@ -1,0 +1,26 @@
+/* zeroing styles from the list */
+.mymenu ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.mymenu ul li{
+    display: inline-block;
+    /* width: 150px; */
+    width: 17%;
+}
+/* styles for links */
+.mymenu ul li a{
+    background-color: #949494;
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border-left: 20px solid #33ADFF;
+    /*make a block element out of an inline element*/
+    display: block;
+}
+.mymenu ul li a:hover{
+    color: orangered;
+    border-left: 20px solid #225832;
+}

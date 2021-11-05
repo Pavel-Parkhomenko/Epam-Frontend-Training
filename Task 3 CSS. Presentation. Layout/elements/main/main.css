@@ -1,0 +1,48 @@
+.news {
+    width: 400px;
+    height: auto;
+    float: right;
+    border: 1px solid #ff896a;;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.news-element{
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    min-height: 60px;
+}
+
+.news-element p{
+    padding: 0px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+img{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+}
+
+/* styles for heafing h3*/
+.text h3{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: orangered;
+}
+/* outer padding for text*/
+.text{
+    margin-left: 10px;
+}
+.text a{
+    /* remove inderline links */
+    text-decoration: none;
+    color: orangered;
+}
+/* on hover set underline links */
+.text a:hover{
+    text-decoration: underline;
+}
