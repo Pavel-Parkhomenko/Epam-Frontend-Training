@@ -1,0 +1,19 @@
+$color: brown;
+
+.footer {
+    color: $color;
+    display: block;
+    text-align: right;
+
+    span {
+        &:last-child {
+            float: right
+        }
+    }
+
+    span {
+        &:first-child {
+            float: left;
+        }
+    }
+}

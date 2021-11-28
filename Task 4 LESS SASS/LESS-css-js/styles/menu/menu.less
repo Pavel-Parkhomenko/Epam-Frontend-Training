@@ -1,0 +1,29 @@
+@colorLink: #33ADFF;
+@colorHover: @colorLink - rgb(41, 46, 102);
+@widthLi: percentage(0.17);
+
+.mymenu ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        width: @widthLi;
+
+        a {
+            background-color: #949494;
+            color: #fff;
+            padding: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            border-left: 20px solid @colorLink;
+            display: block;
+
+            &:hover {
+                color: @colorLink;
+                border-left: 20px solid @colorHover;
+            }
+        }
+    }
+}

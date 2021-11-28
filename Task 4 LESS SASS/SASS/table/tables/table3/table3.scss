@@ -1,0 +1,44 @@
+$fontTable: "Lucida Sans Unicode",
+"Lucida Grande",
+Sans-Serif;
+
+@mixin colorPadiing($color, $padding) {
+    color: $color;
+    padding: $padding;
+}
+
+$i: 4;
+
+@while $i>0 {
+    @if $i % 2==0 {
+        .tr-#{$i} {
+            @include colorPadiing(rgb(92, 231, 64), 7px 17px);
+        }
+    }
+    @else {
+        .tr-#{$i} {
+            @include colorPadiing(rgb(231, 64, 64), 7px 17px);
+        }
+    }
+
+    $i: $i - 1;
+}
+
+table {
+    font-family: $fontTable;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    background: #242726;
+}
+
+th {
+    @include colorPadiing(#EDB749, 12px 17px)
+}
+
+td {
+    &:hover {
+        text-decoration: underline;
+        color: #EDB749;
+    }
+}

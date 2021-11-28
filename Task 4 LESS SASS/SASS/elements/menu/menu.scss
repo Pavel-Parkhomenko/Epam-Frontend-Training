@@ -1,0 +1,55 @@
+$colorHover: #33ADFF - rgb(41, 46, 102);
+$widthLi: percentage(0.17);
+$menuOptions: winter;
+
+@if $menuOptions==winter {
+    .mymenu {
+        li {
+            a {
+                background-color: #949494;
+                text-decoration: none;
+                border-left: 20px solid #33ADFF;
+
+                &:hover {
+                    color: #33ADFF;
+                    border-left: 20px solid $colorHover;
+                }
+            }
+        }
+    }
+}
+
+@else if $menuOptions==summer {
+    .mymenu {
+        li {
+            a {
+                background-color: #7a913c;
+                text-decoration: none;
+                border-left: 20px solid #4bff33;
+
+                &:hover {
+                    color: #4bff33;
+                    border-left: 20px solid $colorHover;
+                }
+            }
+        }
+    }
+}
+
+.mymenu ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        width: $widthLi;
+
+        a {
+            color: #fff;
+            padding: 5px;
+            font-weight: bold;
+            display: block;
+        }
+    }
+}

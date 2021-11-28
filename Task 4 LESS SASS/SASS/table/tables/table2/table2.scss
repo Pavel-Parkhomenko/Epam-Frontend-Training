@@ -1,0 +1,43 @@
+$fontFamilyTable: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+$colorTable: #ECE9E0;
+$colorTd: light;
+
+@mixin fontText($font: 14px, $align: center) {
+    font-size: $font;
+    text-align: $align;
+}
+
+//styles for tag table
+table {
+    font-family: $fontFamilyTable;
+    //remove double cell borders
+    border-collapse: separate;
+    //Set the distance between the borders of cells in the table
+    border-spacing: 5px;
+    background: $colorTable;
+    color: #656665;
+    border: 16px solid #ECE9E0;
+    border-radius: 10px;
+    width: 100%;
+}
+
+td {
+    @if $colorTd==dark {
+        background: #e98a3c;
+    }
+
+    @else if $colorTd==light {
+        background: #F5D7BF;
+    }
+
+    @else {
+        background: rgb(255, 230, 230);
+    }
+
+    @include fontText()
+}
+
+th {
+    padding: 10px;
+    @include fontText(16px);
+}

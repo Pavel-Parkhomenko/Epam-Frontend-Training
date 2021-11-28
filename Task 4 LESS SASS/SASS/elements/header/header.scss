@@ -1,0 +1,25 @@
+$fontHeader: 'Lucida Sans',
+'Lucida Sans Regular',
+'Lucida Grande',
+'Lucida Sans Unicode',
+Geneva,
+Verdana,
+sans-serif;
+
+// styles for h1, h3 from class header
+.header {
+
+    @for $i from 1 through 3 {
+        @if $i !=2 {
+            h#{$i} {
+                text-align: center;
+                color: black;
+                font-family: $fontHeader;
+            }
+        }
+    }
+
+    div {
+        margin-top: 100px;
+    }
+}

@@ -1,0 +1,32 @@
+$colorSelectInput: white;
+$backgroundElements: rgb(238, 119, 76);
+$fontFamilyCaption: Verdana,
+Geneva,
+Tahoma,
+sans-serif;
+
+@mixin backgroundAndColor() {
+    background: $backgroundElements;
+    color: $colorSelectInput;
+}
+
+.table form {
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+
+    select {
+        @include backgroundAndColor();
+        width: 70px;
+    }
+
+    input {
+        @include backgroundAndColor();
+    }
+
+    caption {
+        margin-bottom: 10px;
+        font-family: $fontFamilyCaption;
+        color: orangered;
+    }
+}

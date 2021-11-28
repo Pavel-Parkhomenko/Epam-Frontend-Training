@@ -1,0 +1,29 @@
+@colorTable: #4e5975;
+@fontTable: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+
+.colorPadiing(@color, @padding){
+    color: @color;
+    padding: @padding;
+}
+
+table {
+    font-family: @fontTable;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    background: lighten(@colorTable, 15%);
+    border-radius: 10px;
+}
+
+th {
+    .colorPadiing(#EDB749, 12px 17px)
+}
+
+td {
+    border-left: 1px solid #37B5A5;
+    .colorPadiing(#CAD4D6, 7px 17px);
+    &:hover{
+        text-decoration: underline;
+        color: darken(hsl(rgb(238, 200, 124)), 20%);
+    }
+}

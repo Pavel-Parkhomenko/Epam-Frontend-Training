@@ -1,0 +1,71 @@
+@screenFull: 100%;
+@commonColor: white - rgb(20, 18, 18);
+@fonHeader: "fon3.jpg";
+
+.gridAreaMarginTop(@name, @margin) {
+    grid-area: @name;
+    margin-top: @margin;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+}
+
+html,
+body {
+    height: @screenFull;
+}
+
+.grid_model {
+    display: grid;
+    height: @screenFull;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px (300px / 4 - 30) auto (300px - 250px);
+    grid-template-areas: "header"
+        "mymenu"
+        "main"
+        "footer";
+}
+
+.header,
+.footer,
+.main {
+    background-color: @commonColor;
+}
+
+iframe {
+    width: @screenFull;
+    height: @screenFull;
+}
+
+.header {
+    .gridAreaMarginTop(header, 0);
+    margin-bottom: 10px;
+    background: url(~'../../img/@{fonHeader}') center no-repeat;
+    display: block;
+    background-attachment: fixed;
+}
+
+.main {
+    .gridAreaMarginTop(main, 10px);
+}
+
+.main-home {
+    height: 820px;
+}
+
+.mymenu {
+    .gridAreaMarginTop(mymenu, 0);
+    position: sticky;
+    background-color: #ff896a;
+    padding: 0;
+}
+
+.footer {
+    .gridAreaMarginTop(footer, 10px);
+}

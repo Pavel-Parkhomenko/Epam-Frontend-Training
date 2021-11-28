@@ -1,0 +1,65 @@
+$screenFull: 100%;
+$commonColor: white - rgb(20, 18, 18);
+
+@mixin gridAreaMarginTop($name, $margin) {
+    grid-area: $name;
+    margin-top: $margin;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+}
+
+html,
+body {
+    height: $screenFull;
+}
+
+.grid_model {
+    display: grid;
+    height: $screenFull;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 45px auto 50px;
+    grid-template-areas: "header"
+        "mymenu"
+        "main"
+        "footer";
+}
+
+@each $name in header,footer,main,mymenu{
+    .#{$name}{
+        background-color: $commonColor;
+        @include gridAreaMarginTop(#{$name}, 0);
+    }
+}
+
+iframe {
+    width: $screenFull;
+    height: $screenFull;
+}
+
+.header{
+    margin-bottom: 10px;
+    background: url('../img/fon3.jpg') center no-repeat;
+    display: block;
+    background-color: black;
+    background-attachment: fixed;
+}
+
+.main-home {
+    height: 820px;
+}
+.main, .footer{
+    margin-top: 10px
+}
+
+.mymenu{
+    position: sticky;
+    background-color: #ff896a;
+    padding: 0;
+}

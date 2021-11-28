@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: white;
+}
+html,
+body {
+  height: 100%;
+}
+.grid_model {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 300px 45px auto 50px;
+  grid-template-areas: "header" "mymenu" "main" "footer";
+}
+.header,
+.footer,
+.main {
+  background-color: #ebeded;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+}
+.header {
+  grid-area: header;
+  margin-top: 0;
+  margin-bottom: 10px;
+  background: url(../../img/fon3.jpg) center no-repeat;
+  display: block;
+  background-attachment: fixed;
+}
+.main {
+  grid-area: main;
+  margin-top: 10px;
+}
+.main-home {
+  height: 820px;
+}
+.mymenu {
+  grid-area: mymenu;
+  margin-top: 0;
+  position: sticky;
+  background-color: #ff896a;
+  padding: 0;
+}
+.footer {
+  grid-area: footer;
+  margin-top: 10px;
+}

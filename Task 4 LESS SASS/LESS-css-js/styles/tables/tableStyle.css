@@ -1,0 +1,19 @@
+.table form {
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+}
+.table form select {
+  background: #f17517;
+  color: white;
+  width: 70px;
+}
+.table form input {
+  background: #f17517;
+  color: white;
+}
+.table form caption {
+  margin-bottom: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #f17517;
+}

@@ -1,0 +1,53 @@
+$fontFamilyH: Verdana, Geneva, Tahoma, sans-serif;
+$colorTexrH: orangered;
+
+@mixin width_and_height($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+.news {
+    @include width_and_height(400px, auto);
+    float: right;
+    border: 1px solid orangered;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.news-element {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    min-height: (100px - 40px);
+
+    p {
+        padding: 0px;
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+}
+
+img {
+    @include width_and_height(50px, 50px);
+    border-radius: 10px;
+}
+
+// outer padding for text
+.text {
+    margin-left: 10px;
+
+    a {
+        text-decoration: none;
+        color: $colorTexrH;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    h3{
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-family: $fontFamilyH;
+        color: $colorTexrH;
+    }
+}

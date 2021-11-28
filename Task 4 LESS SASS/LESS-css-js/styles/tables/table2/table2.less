@@ -1,0 +1,31 @@
+@fontFamilyTable: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+@colorTable: rgb(236, 233, 224);
+
+.fontText(@font: 14px, @align: center) {
+    font-size: @font;
+    text-align: @align;
+}
+
+//styles for tag table
+table {
+    font-family: @fontFamilyTable;
+    //remove double cell borders
+    border-collapse: separate;
+    //Set the distance between the borders of cells in the table
+    border-spacing: 5px;
+    background: @colorTable;
+    color: #656665;
+    border: 16px solid @colorTable;
+    border-radius: 10px;
+    width: 100%;
+}
+
+td {
+    background: darken(@colorTable, 30%);
+    .fontText()
+}
+
+th {
+    padding: 10px;
+    .fontText(16px);
+}

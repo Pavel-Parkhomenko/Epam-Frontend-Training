@@ -1,0 +1,22 @@
+.mymenu ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.mymenu ul li {
+  display: inline-block;
+  width: 17%;
+}
+.mymenu ul li a {
+  background-color: #949494;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  border-left: 20px solid #33ADFF;
+  display: block;
+}
+.mymenu ul li a:hover {
+  color: #33ADFF;
+  border-left: 20px solid #0a7f99;
+}

@@ -1,0 +1,29 @@
+@colorSelectInput: white;
+@backgroundElements: spin(rgb(241, 81, 23), 10);
+@fontFamilyCaption: Verdana, Geneva, Tahoma, sans-serif;
+
+.backgroundAndColor(){
+    background: @backgroundElements;
+    color: @colorSelectInput;
+}
+
+.table form {
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+
+    select {
+        .backgroundAndColor();
+        width: 70px;
+    }
+
+    input {
+        .backgroundAndColor();
+    }
+
+    caption {
+        margin-bottom: 10px;
+        font-family: @fontFamilyCaption;
+        color: @backgroundElements;
+    }
+}

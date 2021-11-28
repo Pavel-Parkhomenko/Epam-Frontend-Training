@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Uncomment this to use LESS to CSS -->
+    <!-- <link rel="stylesheet" href="../styles/index/index.css">
+    <link rel="stylesheet" href="../styles/tables/table1/table1.css" id="linkTable">
+    <link rel="stylesheet" href="../styles/tables/tableStyle.css"> -->
+
+    <link rel="stylesheet/less" type="text/css" href="../styles/index/index.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
+    <link rel="stylesheet/less" type="text/css" href="../styles/tables/table1/table1.less" id="linkTable"/>
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
+    <link rel="stylesheet/less" type="text/css" href="../styles/tables/tableStyle.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
+
+    <title>Table</title>
+</head>
+
+<body>
+    <!-- grid model. styles from index.css -->
+    <div class="grid_model">
+        <div class="header">
+            <!--using iframe header. remove scrolling and border-->
+            <iframe scrolling="no" src="header.html" frameborder="0"></iframe>
+        </div>
+        <div class="mymenu">
+            <!--using iframe menu. remove scrolling and border-->
+            <iframe scrolling="no" src="menu.html" frameborder="0"></iframe>
+        </div>
+        <!--place for table-->
+        <div class="main">
+            <div class="table">
+                <table>
+                    <!--header table-->
+                    <caption>
+                        <h3>Рейтинг языков программирования</h3>
+                    </caption>
+                    <tr>
+                        <th>Год</th>
+                        <th>JavaScript</th>
+                        <th>C#</th>
+                        <th>PHP</th>
+                    </tr>
+                    <tr>
+                        <th>2000</th>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>2010</th>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th>2015</th>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <th>2021</th>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>3</td>
+                    </tr>
+                </table>
+                <!--form for select style table-->
+                <form action="#" method="post" id="form">
+                    <!-- drop-down list where you can choose one of three table styles -->
+                    <select size="1" name="select">
+                        <!--default them1-->
+                        <option selected value="them1">тема 1</option>
+                        <option value="them2">тема 2</option>
+                        <option value="them3">тема 3</option>
+                    </select>
+                    <!--button to submit selection -->
+                    <input name="submit" type="submit" value="Применить">
+                </form>
+            </div>
+            <!--script to choose a style table-->
+            <script src="../tableScript.js"></script>
+        </div>
+        <div class="footer">
+            <!--using iframe menu. remove scrolling and border-->
+            <iframe scrolling="no" src="footer.html" frameborder="0"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>
