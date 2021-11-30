@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calc.css">
+    <title>Task 5</title>
+</head>
+<body>
+    <div class="calc">
+        <div class="calc-screen">
+            <textarea readonly></textarea>   
+        </div>
+        <div class="options">
+            <form class="radioButtons">
+                <input checked type="radio" name="radio" id="radioInt">
+                <label for="radioInt">INT</label>
+                <input type="radio" name="radio" id="radioFloat">
+                <label for="radioFloat">Float</label>
+            </form>
+            <form class="checkPriorety">
+                <input checked type="checkbox" name="priorety" id="checkYesPriorety">
+                <label for="radioInt">pr+</label>
+                <input type="checkbox" name="priorety" id="checkNoPriorety">
+                <label for="radioFloat">pr-</label>
+            </form>
+            <input type="button" value="server" id="butToServer">
+        </div>
+        <div class="buttons">
+            <div class="btn ac cr-red">C</div>
+            <!-- <div class="btn plus-minus bg-grey">+/-</div>
+            <div class="btn percent bg-grey">%</div> -->
+            <div class="btn memory-add memory bg-green">m+</div>
+            <div class="btn memory-out memory bg-green">m</div>
+            <div class="btn division bg-green">/</div>
+
+            <div class="btn seven">7</div>
+            <div class="btn eigth">8</div>
+            <div class="btn nine">9</div>
+            <div class="btn myltiply bg-green">*</div>
+
+            <div class="btn four ">4</div>
+            <div class="btn five ">5</div>
+            <div class="btn six ">6</div>
+            <div class="btn minus bg-green">-</div>
+
+            <div class="btn one ">1</div>
+            <div class="btn two ">2</div>
+            <div class="btn three ">3</div>
+            <div class="btn plus bg-green">+</div>
+
+            <div class="btn zero ">0</div>
+            <div class="btn dot ">.</div>
+            <div class="btn equal bg-green">=</div>
+        </div>
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>
