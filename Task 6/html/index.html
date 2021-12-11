@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/index.css">
+    <title>Task 6</title>
+</head>
+
+<body>
+    <div class="commonPizzeria">
+        <div class="pizzeria">
+            <div class="makePizza">
+                <p>Обязательно*</p>
+                <span> Основа
+                    <select name="bases" id="basesSelect" class="pizza">
+                        <option selected>Выберите основу</option>
+                    </select>
+                </span>
+
+                <span> Ингредиенты
+                    <select name="ingredients" id="ingredientsSelect" class="pizza">
+                        <option selected>Выберите ингридиент</option>
+                    </select>
+                </span>
+
+                <p>По желанию*</p>
+                <span> Соус
+                    <select name="sauce" id="sauceSelect" class="pizza">
+                        <option selected>Выберите соус</option>
+                    </select>
+                </span>
+
+                <span> Приправа
+                    <select name="spice" id="spiceSelect" class="pizza">
+                        <option selected>Выберите приправу</option>
+                    </select>
+                </span>
+            </div>
+            <div class="info">
+                <p>
+                    <span>Ваша наценка: </span>
+                    <span class="extraСharge">0</span>
+                </p>
+                <div>
+                    <span>Общая стоимость</span>
+                    <span class="commonCost">0</span>
+                </div>
+                <div>
+                    <span>Общее кол-во каллорий</span>
+                    <span class="commonCalorie">0</span>
+                </div>
+                <input type="button" value="посчитать" class="btn butCompute">
+                <input disabled type="button" value="отправить" class="btn butSend">
+                <p class="textInfo"></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../scripts/index.js"></script>
+</body>
+
+</html>
