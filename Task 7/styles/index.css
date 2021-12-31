@@ -1,0 +1,17 @@
+html, body {
+    height: 100vh;
+    width: 100wh;
+    overflow-y: hidden;
+    position: relative;
+    background-color: rgb(56, 52, 39);
+}
+
+.menu {
+    background-color: rgb(221, 198, 123);
+    position: absolute;
+    height: 50%;
+    width: 30%;
+    left: 35%;
+    top: 24%;
+    padding: 20px;
+}
