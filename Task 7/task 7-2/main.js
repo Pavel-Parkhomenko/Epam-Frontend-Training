@@ -2,63 +2,94 @@ const img = document.querySelector("#imgDuster");
 const height = window.innerHeight;
 const width = window.innerWidth;
 
-let moveImg;
+let over = false;
 
-for (let i = 0; i < 10; i++) {
-    randDuster();
-}
+window.addEventListener('DOMContentLoaded', () => {
+	for (let i = 0; i < 10; i++) {
+		randDuster(i);
+	}
+});
 
-document.addEventListener("mousedown", (event) => {
-    console.log(event.target.tagName);
-    if (event.target.tagName == "IMG") {
-        dragElement(event.target);
-    }
+window.addEventListener("dragstart", event => {
+	if (!event.target.classList.contains("duster")) return;
+	console.log("dragstart")
+	event.dataTransfer.setData("id", event.target.id);
 })
 
+window.addEventListener("dragend", event => {
+	if (!event.target.classList.contains("duster")) return;
+	console.log("dragend");
+})
 
-function dragElement(elmnt) {
-    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+window.addEventListener("drag", event => {
+	if (!event.target.classList.contains("duster")) return;
+	console.log("drag");
+	console.log(event.clientX, event.clientY);
 
-    elmnt.onmousedown = dragMouseDown;
-    
-    function dragMouseDown(e) {
-      e = e || window.event;
-      pos3 = e.clientX;
-      pos4 = e.clientY;
-      document.onmouseup = closeDragElement;
-      document.onmousemove = elementDrag;
-    }
-  
-    function elementDrag(e) {
-      e = e || window.event;
-      pos1 = pos3 - e.clientX;
-      pos2 = pos4 - e.clientY;
-      pos3 = e.clientX;
-      pos4 = e.clientY;
-      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-    }
-  
-    function closeDragElement() {
-      document.onmouseup = null;
-      document.onmousemove = null;
-    }
-  }
+})
+
+img.addEventListener("dragover", event => {
+	event.preventDefault();
+	console.log("dragover");
+	img.src = "img/dust-open.PNG";
+	over = true;
+})
+
+window.addEventListener("dragover", event => {
+	event.preventDefault();
+})
+
+img.addEventListener("dragleave", event => {
+	event.preventDefault();
+	console.log("dragleave");
+	img.src = "img/dust-close.PNG";
+	over = false;
+})
+
+window.addEventListener("drop", event => {
+	console.log("drop");
+	let item = document.getElementById(event.dataTransfer.getData("id"));
+	item.style.top = event.clientY - 10 + "px";
+	item.style.left = event.clientX - 10 + "px";
+	console.log(event.clientX, event.clientY);
+
+	if (over == true) {
+		item.parentNode.removeChild(item);
+		img.src = "img/dust-close.PNG";
+		over = false;
+	}
+})
+console.log(width, height)
 
 function randDuster(i) {
-    let duster = document.createElement("img")
-    duster.src = "img/duster.png";
-    duster.style.left = Math.random() * width - 20 + "px";
-    duster.style.top = Math.random() * height - 20 + "px";
-    duster.style.position = "absolute";
-    duster.style.cursor = "move"
-    document.body.append(duster);
+	let duster = document.createElement("img");
+	duster.setAttribute("draggable", "true");
+	duster.style.zIndex = i;
+	duster.id = "d-" + i;
+	duster.classList.add("duster");
+	duster.src = "img/duster.png";
+	duster.style.left = randPosition()[0] - 10 + "px";
+	duster.style.top = randPosition()[1] - 30 + "px";
+	duster.style.position = "absolute";
+	duster.style.cursor = "move";
+	duster.style.userSelect = "none"
+	document.body.append(duster);
+	return duster;
 }
 
-img.addEventListener("mouseover", () => {
-    img.src = "img/dust-open.PNG";
-})
+function randPosition() {
+	let posX = Math.random() * width;
+	let posY = Math.random() * height;
+	let pos = [posX, posY];
 
-img.addEventListener("mouseout", () => {
-    img.src = "img/dust-close.PNG";
-})
+	while (true) {
+		if (posX > 130 && posY > 130) {
+			return pos;
+		}
+		else {
+			posX = Math.random() * width;
+			posY = Math.random() * height;
+			pos = [posX, posY];
+		}
+	}
+}
