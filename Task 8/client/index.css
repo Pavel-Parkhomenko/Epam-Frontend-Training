@@ -35,3 +35,7 @@
 .but-send{
     visibility: collapse;
 }
+
+.text-key{
+    background-color: rgb(184, 241, 161);
+}

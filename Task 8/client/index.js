@@ -1,9 +1,9 @@
-import { default as Event } from './event.js';
+import { default as Event } from './src/event.js';
 
 let mySelect = document.querySelector("#select-file");
 
 document.querySelector(".but-edit").addEventListener("click", (event) => {
-    getData("GET", "../jsonFiles/" + mySelect.value + ".json").then((data) => {
+    getData("GET", "../server/json/" + mySelect.value + ".json").then((data) => {
         let form = document.getElementById("form");
         form.replaceChildren();
         let keys = Object.keys(data[0]);
@@ -13,12 +13,11 @@ document.querySelector(".but-edit").addEventListener("click", (event) => {
             form.insertAdjacentHTML("beforeend", '<input type="text" class="inp-text" ' + 'name="' +
                 keys[i] + '" value="' + values[i] + '">');
         }
-        form.insertAdjacentHTML("beforeend", '<button type="submit">Отправить</button>');
+        form.insertAdjacentHTML("beforeend", '<br><br><button type="submit">Отправить</button>');
     });
-
 })
 
-document.querySelector("#form").addEventListener("submit", (e) => {
+document.querySelector("#form").addEventListener("submit", async (e) => {
     e.preventDefault();
     let inpts = document.querySelectorAll(".inp-text");
     let flag = true;
@@ -36,11 +35,12 @@ document.querySelector("#form").addEventListener("submit", (e) => {
         newEvent.importance = form['importance'].value;
         newEvent.comment = form['comment'].value;
         newEvent.nameFile = mySelect.value;
-        getData("POST", "http://localhost:8000/server/server.js", newEvent.toJSON())
-            .then((data) => console.log(data[0]))
-            .catch((error) => console.log(error))
+        try {
+            const data = await getData("POST", "http://localhost:8000/", newEvent.toJSON())
+            console.log(data[0]);
+        }
+        catch (err){console.log(err);}
     }
-    return false;
 })
 
 function getData(method, url, body = null) {
@@ -57,8 +57,8 @@ function getData(method, url, body = null) {
                         state: this.readyState,
                         status: this.status,
                         statusText: this.statusText,
+                        responseType: this.responseType,
                     }
-                    // console.log(info);
                     resolve([data, info]);
                 }
                 else {
@@ -76,7 +76,7 @@ function addDataToHtml(id, data) {
     let keys = Object.keys(data);
     let values = Object.values(data);
     for (let i = 0; i < keys.length; i++) {
-        div.insertAdjacentHTML("beforeend", "<p>" + keys[i] + "</p>");
+        div.insertAdjacentHTML("beforeend", "<p class='text-key'>" + keys[i] + "</p>");
         div.insertAdjacentHTML("beforeend", "<span>" + values[i] + "</span>");
     }
 }
@@ -101,7 +101,7 @@ let seconds = 0;
 let interval = setInterval(function () {
     cnt++; seconds++;
     if (cnt == 4) cnt = 1;
-    getData("GET", "../jsonFiles/event-" + cnt + ".json")
+    getData("GET", "../server/json/event-" + cnt + ".json")
         .then((data) => {
             addDataToHtml(cnt, data[0]);
             addInfoRequest(cnt, seconds, data[1]);

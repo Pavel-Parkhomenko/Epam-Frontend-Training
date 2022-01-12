@@ -32,11 +32,11 @@ export default class Event {
 
     toJSON() {
         return JSON.stringify({
+            nameFile: this.#file,
             date: this.#date,
             name: this.#name,
             importance: this.#importance,
             comment: this.#comment,
-            nameFile: this.#file
         });
     }
 }
