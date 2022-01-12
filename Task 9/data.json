@@ -1,0 +1,39 @@
+{
+    "students": [
+        {
+            "id": 1,
+            "firstName": "Pavel",
+            "secondName": "Parkhomenko",
+            "age": 20,
+            "speciality": "Programmer"
+        },
+        {
+            "id": 2,
+            "firstName": "Dima",
+            "secondName": "Kirpichenko",
+            "age": 19,
+            "speciality": "Programmer"
+        },
+        {
+            "id": 3,
+            "firstName": "Stas",
+            "secondName": "Khomenkov",
+            "age": 19,
+            "speciality": "Programmer"
+        },
+        {
+            "id": 4,
+            "firstName": "TestTest",
+            "secondName": "Test",
+            "age": 30,
+            "speciality": "Programmer"
+        },
+        {
+            "id": 5,
+            "firstName": "test first",
+            "secondName": "secondName",
+            "age": 100,
+            "speciality": "Programmer"
+        }
+    ]
+}
