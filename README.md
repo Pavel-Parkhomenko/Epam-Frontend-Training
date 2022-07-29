@@ -7,7 +7,7 @@
 - Web Site
 - Semantic Web
 - CSS-Presentation-Layout
-- JS-Basics
+- JS-Basics - Calculator
 - JS-Objects
 - Animation
 - Promise
